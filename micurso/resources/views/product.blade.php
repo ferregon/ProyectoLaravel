@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('contenido')
-<h1>Saludos para {{ $nombre }}</h1>
+<h1>Bienvenido {{ $nombre }}</h1>
 <ul>
 @forelse ($consolas as $consola)
 <li> {{ $consola }} </li>

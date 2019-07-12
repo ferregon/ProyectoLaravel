@@ -28,6 +28,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+      public function role()
+      {
+        return $this->belongsTo(Role::class);
+      }
     /**
      * The attributes that should be cast to native types.
      *
@@ -36,4 +40,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function hasRoles(array $roles)
+    {
+        foreach ($roles as $role)
+        {
+            if($this ->role->name === $role)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public function isAdmin ()
+    {
+        return $this->hasRoles (['admin']);
+    }
 }

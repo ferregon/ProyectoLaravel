@@ -18,9 +18,9 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function home()
     {
-        //
+        return view('home');
     }
 
     /**
@@ -28,14 +28,7 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function mensajes(CreateMessageRequest $request)
-    {
-        //return $request->all();
-        return back()->with('info', 'Tu mensaje ha sido enviado!!');
-    }
-
-
-    public function saludo($nombre = "Invitado")
+    public function product($nombre = "Invitado")
     {
     $consolas = [
         "Play Station 4",
@@ -43,67 +36,6 @@ class PagesController extends Controller
         "Xbox one",
         "Wii U"
        ];
-       return view('saludo', compact('nombre', 'consolas'));
-    }
-
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+       return view('product', compact('nombre', 'consolas'));
     }
 }
