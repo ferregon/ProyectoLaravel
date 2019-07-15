@@ -2,5 +2,5 @@
 
  @section('contenido')
 <h1>Bievenidos al HOME</h1>
-
-@endsection 
+<h2>Estamos de mantenimiento</h2>
+@endsection
