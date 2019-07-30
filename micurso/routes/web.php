@@ -24,7 +24,16 @@ Route:: get ('roles', function(){
 });
 
 Route::view('/', 'home')->name('home');
-Route::get('product/{nombre?}', ['as' => 'producto', 'uses' =>'PagesController@product'])->where ('nombre', '[A-Za-z]+');
+Route::get('product', 'ProductoController@index')->name('producto.index');
+Route::get('product/create', 'ProductoController@create')->name('producto.create');
+Route::get('product/{id}', 'ProductoController@show')->name('producto.show');
+Route::post('product', 'ProductoController@store')->name('producto.store');
+Route::get('product/{id}/edit', 'ProductoController@edit')->name('producto.edit');
+Route::delete('product/{id}', 'ProductoController@destroy')->name('producto.destroy');
+Route::put('product/{id}', 'ProductoController@update')->name('producto.update');
+
+
+
 
 Route::resource('mensajes', 'MessagesController');
 

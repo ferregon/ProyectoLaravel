@@ -12,13 +12,13 @@
 	{!! csrf_field() !!}
 	<p><label for="nombre">
 		Nombre
-		<input class="form-control" type="text" name="nombre" value="{{ old('nombre') }}" required="required">
+		<input class="form-control" type="text" name="nombre" value="{{ old('nombre') }}" required>
 		{!! $errors->first('nombre', '<span class=error>:message</span>') !!}
 	</label></p>
 
 	<p><label for="email">
 		Email
-		<input class="form-control" type="text" name="email" value="{{ old('email') }}">
+		<input class="form-control" type="text" name="email" value="{{ old('email') }}" required="">
 		{!! $errors->first('email', '<span class=error>:message</span>') !!}
 	</label></p>
 	<p><label for="phone">

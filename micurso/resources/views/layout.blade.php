@@ -19,7 +19,7 @@
 				<a class="nav-link active " href="{{ route('home') }}">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="{{ route('producto') }}">Productos</a>
+				<a class="nav-link" href="{{ route('producto.index') }}">Productos</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="{{ route('mensajes.create') }}">Contactos</a>
